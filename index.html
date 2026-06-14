@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yazra Marketing — Digital marketing agency. Branding, social media, content creation and web design. Villupuram, India." />
+  <title>Yazra Marketing — Grow Your Brand. Dominate Online.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="ld-inner">
+      <div class="ld-ring">
+        <svg viewBox="0 0 120 120" class="ld-svg">
+          <circle cx="60" cy="60" r="52" class="ld-track"/>
+          <circle cx="60" cy="60" r="52" class="ld-progress" id="ld-arc"/>
+        </svg>
+        <div class="ld-center">
+          <div class="ld-logo-txt">Y</div>
+          <span id="ld-pct">0%</span>
+        </div>
+      </div>
+      <div class="ld-brand">Yazra Marketing</div>
+      <div class="ld-bar"><div id="ld-fill"></div></div>
+    </div>
+  </div>
+  <!-- PROGRESS -->
+  <div id="pbar"></div>
+  <!-- ═══ HEADER ═══ -->
+  <header id="hdr">
+    <div class="hdr-wrap">
+      <a href="#hero" class="logo" id="logo-link">
+        <img src="yazra_logo.pg.jpeg" alt="Yazra Marketing" class="logo-img">
+      </a>
+      <br>
+      <br>
+      <nav class="nav" id="nav">
+        <a href="#hero"     class="nav-a">Home</a>
+        <a href="#services"  class="nav-a">Services</a>
+        <a href="#portfolio" class="nav-a">Projects</a>
+        <a href="#testimonials" class="nav-a">Reviews</a>
+        <a href="#contact"   class="nav-a">Contact</a>
+      </nav>
+      <div class="hdr-btns" id="hdr-btns">
+        <a href="#contact" class="btn-cta">Get a Free Consultation</a>
+      </div>
+      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <!-- ═══ HERO ═══ -->
+  <section id="hero" class="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-center-wrap">
+      <div class="hero-badge reveal">
+        <span class="hbdot">&#9670;</span> Digital Marketing Agency &bull; Est. May 2026 <span class="hbdot">&#9670;</span>
+      </div>
+      <div class="hero-logo-box reveal">
+        <img src="yazra_logo.pg.jpeg" alt="Yazra Marketing" class="hero-logo-img">
+      </div>
+      <h1 class="hero-h1 reveal">Yazra Marketing</h1>
+      <p class="hero-tagline reveal">Websites &nbsp;&middot;&nbsp; Content &nbsp;&middot;&nbsp; Social Media Growth</p>
+      <p class="hero-sub reveal">We help businesses in Tamil Nadu build a powerful online presence through premium branding, creative content and result-driven digital marketing.</p>
+      <div class="hero-ctas reveal">
+        <button class="btn-hero-primary" onclick="goTo('services')">Explore Services <i class="fas fa-arrow-right"></i></button>
+      </div>
+      <div class="hero-divider reveal"></div>
+      <div class="hero-stats reveal">
+        <div class="hs-item"><strong>01</strong><span>Project Delivered</span></div>
+        <div class="hs-div"></div>
+        <div class="hs-item"><strong>01</strong><span>Happy Client</span></div>
+        <div class="hs-div"></div>
+        <div class="hs-item"><strong>50+</strong><span>Followers Gained</span></div>
+        <div class="hs-div"></div>
+        <div class="hs-item"><strong>MAY 2026</strong><span>Founded</span></div>
+      </div>
+    </div>
+  </section>
+  <!-- ═══ MARQUEE ═══ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <span>Social Media Marketing</span><i class="fas fa-star"></i>
+        <span>Branding &amp; Identity</span><i class="fas fa-star"></i>
+        <span>Reel Editing</span><i class="fas fa-star"></i>
+        <span>Web Design</span><i class="fas fa-star"></i>
+        <span>Content Creation</span><i class="fas fa-star"></i>
+        <span>Growth Strategy</span><i class="fas fa-star"></i>
+        <span>Social Media Marketing</span><i class="fas fa-star"></i>
+        <span>Branding &amp; Identity</span><i class="fas fa-star"></i>
+        <span>Reel Editing</span><i class="fas fa-star"></i>
+        <span>Web Design</span><i class="fas fa-star"></i>
+        <span>Content Creation</span><i class="fas fa-star"></i>
+        <span>Growth Strategy</span><i class="fas fa-star"></i>
+      </div>
+    </div>
+  </div>
+  <!-- ═══ SERVICES ═══ -->
+  <section id="services" class="sec svc-sec">
+    <div class="sec-wrap">
+      <div class="sec-top">
+        <div class="sec-left">
+          <div class="kicker reveal"><span class="kd"></span> What We Offer</div>
+          <h2 class="sec-h2 reveal">Our Services</h2>
+        </div>
+        <p class="sec-desc reveal">Everything your business needs to build a strong online presence — from the ground up.</p>
+      </div>
+      <div class="svc-list">
+        <div class="svl-item reveal">
+          <div class="svl-num">01</div>
+          <div class="svl-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="svl-body">
+            <h3>Website Creation</h3>
+            <p>Fast, mobile-first, professional websites designed to convert visitors into paying customers. Delivered in days, not months.</p>
+          </div>
+          <div class="svl-tag">Web</div>
+        </div>
+        <div class="svl-item reveal">
+          <div class="svl-num">02</div>
+          <div class="svl-icon"><i class="fab fa-instagram"></i></div>
+          <div class="svl-body">
+            <h3>Instagram Management</h3>
+            <p>Full setup and daily management of your Instagram — profile optimisation, content calendar, posting, and follower growth.</p>
+          </div>
+          <div class="svl-tag">Social</div>
+        </div>
+        <div class="svl-item reveal">
+          <div class="svl-num">03</div>
+          <div class="svl-icon"><i class="fas fa-film"></i></div>
+          <div class="svl-body">
+            <h3>Reel &amp; Video Editing</h3>
+            <p>Professionally edited short-form reels and videos with captions, music and transitions optimised for Instagram and WhatsApp.</p>
+          </div>
+          <div class="svl-tag">Video</div>
+        </div>
+        <div class="svl-item reveal">
+          <div class="svl-num">04</div>
+          <div class="svl-icon"><i class="fas fa-paint-brush"></i></div>
+          <div class="svl-body">
+            <h3>Graphic &amp; Post Design</h3>
+            <p>Eye-catching promotional posts, banners, carousels and stories that match your brand and grab attention in the feed.</p>
+          </div>
+          <div class="svl-tag">Design</div>
+        </div>
+        <div class="svl-item reveal">
+          <div class="svl-num">05</div>
+          <div class="svl-icon"><i class="fas fa-crown"></i></div>
+          <div class="svl-body">
+            <h3>Brand Identity</h3>
+            <p>Logo design, colour palette, typography and a complete brand kit that gives your business a consistent, professional image.</p>
+          </div>
+          <div class="svl-tag">Brand</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ═══ PORTFOLIO ═══ -->
+  <section id="portfolio" class="sec port-sec">
+    <div class="sec-wrap">
+      <div class="sec-top">
+        <div class="sec-left">
+          <div class="kicker reveal"><span class="kd"></span> Our Work</div>
+          <h2 class="sec-h2 reveal">Featured Project</h2>
+        </div>
+      </div>
+      <div class="port-card reveal" onclick="window.open('https://vijayalakshmitextiles.github.io/selvaraj_muthusamy/','_blank')">
+        <div class="pc-visual">
+          <div class="pc-logo-display">
+            <img src="VT_LOGO.jpeg" alt="Vijayalakshmi Textiles" class="vt-logo-img">
+          </div>
+          <div class="pc-live-tag"><i class="fas fa-circle"></i> Live Website</div>
+        </div>
+        <div class="pc-content">
+          <span class="pc-cat">Website Creation &middot; Content Design</span>
+          <h3>Vijayalakshmi Textiles</h3>
+          <p>Built a complete business website and created posts &amp; videos to help grow their online presence and reach more customers.</p>
+          <div class="pc-tags">
+            <span>Website</span><span>Posts</span><span>Videos</span><span>Instagram: <a href="https://instagram.com/vijayalakshmi__textiles" target="_blank" style="color:inherit">@vijayalakshmi__textiles</a></span>
+          </div>
+          <a href="https://vijayalakshmitextiles.github.io/selvaraj_muthusamy/" class="btn-primary" target="_blank" onclick="event.stopPropagation()">
+            Visit Live Website <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+      <div class="more-soon reveal">
+        <i class="fas fa-hourglass-half"></i>
+        <span>More projects coming soon — we're just getting started!</span>
+      </div>
+    </div>
+  </section>
+  <!-- ═══ WHY US ═══ -->
+  <section id="why-us" class="sec why-sec">
+    <div class="sec-wrap">
+      <div class="sec-top center">
+        <div class="kicker reveal"><span class="kd"></span> Why Yazra</div>
+        <h2 class="sec-h2 reveal">Why Clients Choose Us</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="wc-ico"><i class="fas fa-lightbulb"></i></div>
+          <h3>Creative First</h3>
+          <p>Every campaign is crafted fresh — no templates, no shortcuts.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="wc-ico"><i class="fas fa-bolt"></i></div>
+          <h3>Fast Delivery</h3>
+          <p>24–72 hour turnarounds. We move fast and deliver on time.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="wc-ico"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Mobile-First</h3>
+          <p>All designs built for mobile audiences first, then scaled up.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="wc-ico"><i class="fas fa-hand-holding-heart"></i></div>
+          <h3>Startup-Friendly</h3>
+          <p>Flexible packages and transparent pricing with zero corporate fluff.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ═══ TESTIMONIAL ═══ -->
+  <section id="testimonials" class="sec testi-sec">
+    <div class="sec-wrap">
+      <div class="sec-top center">
+        <div class="kicker reveal"><span class="kd"></span> Client Review</div>
+        <h2 class="sec-h2 reveal">What Our Client Says</h2>
+      </div>
+      <div class="testi-card reveal">
+        <div class="tc-quote"><i class="fas fa-quote-left"></i></div>
+        <p>"Rajesh created a great website for our textiles business and helped us with posts and videos. It really helped our company get noticed online and grow our customer reach. Very happy with the work done by Yazra Marketing!"</p>
+        <div class="tc-footer">
+          <div class="tc-av">SM</div>
+          <div class="tc-info">
+            <strong>Selvaraj Muthusamy</strong>
+            <span>Vijayalakshmi Textiles</span>
+            <div class="tc-stars">★★★★★</div>
+          </div>
+          <a href="https://vijayalakshmitextiles.github.io/selvaraj_muthusamy/" class="tc-link" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Visit Website
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="sec contact-sec">
+    <div class="sec-wrap">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <div class="kicker reveal"><span class="kd"></span> Get In Touch</div>
+          <h2 class="sec-h2 reveal">Let's Work Together</h2>
+          <div class="cd-list reveal">
+            <div class="cd-row">
+              <i class="fas fa-user"></i>
+              <div><span>Founder</span><strong>Rajesh</strong></div>
+            </div>
+            <div class="cd-row">
+              <i class="fas fa-graduation-cap"></i>
+              <div><span>Education</span><strong>BSc CS AIML · Takshashila University, Villupuram</strong></div>
+            </div>
+            <div class="cd-row">
+              <i class="fab fa-whatsapp"></i>
+              <div><span>WhatsApp</span><a href="https://wa.me/919342199463" target="_blank">+91 93421 99463</a></div>
+            </div>
+            <div class="cd-row">
+              <i class="fas fa-envelope"></i>
+              <div><span>Email</span><a href="mailto:yazramarketing.official@gmail.com">yazramarketing.official@gmail.com</a></div>
+            </div>
+            <div class="cd-row">
+              <i class="fab fa-instagram"></i>
+              <div><span>Instagram</span><a href="https://instagram.com/yazra.marketing" target="_blank">@yazra.marketing</a></div>
+            </div>
+            <div class="cd-row">
+              <i class="fas fa-briefcase"></i>
+              <div><span>My Portfolio</span><a href="https://rajes44.github.io/Rajesh_Portfolio/" target="_blank">View Portfolio</a></div>
+            </div>
+          </div>
+          <div class="social-row reveal">
+            <a href="https://wa.me/919342199463" class="sr-btn sr-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/yazra.marketing" class="sr-btn sr-ig" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:yazramarketing.official@gmail.com" class="sr-btn sr-em"><i class="fas fa-envelope"></i></a>
+            <a href="https://rajes44.github.io/Rajesh_Portfolio/" class="sr-btn sr-pf" target="_blank"><i class="fas fa-briefcase"></i></a>
+          </div>
+        </div>
+        <div class="contact-right reveal">
+          <div class="cf-card">
+            <h3>Send a Message</h3>
+            <p>We respond within a few hours.</p>
+            <div class="cf-group">
+              <label>Service You Need</label>
+              <select id="cf-svc">
+                <option value="">Choose a service...</option>
+                <option>Social Media Marketing</option>
+                <option>Branding & Identity</option>
+                <option>Reel Editing</option>
+                <option>Website Creation</option>
+                <option>Content Design</option>
+                <option>Growth Strategy</option>
+                <option>Full Package</option>
+              </select>
+            </div>
+            <div class="cf-group">
+              <label>Your Message</label>
+              <textarea id="cf-msg" rows="4" placeholder="Tell us about your brand and goals..."></textarea>
+            </div>
+            <button class="btn-primary w100" onclick="sendWA()">
+              <i class="fab fa-whatsapp"></i> Send via WhatsApp
+            </button>
+            <div class="cf-or"><span>or</span></div>
+            <a href="mailto:yazramarketing.in@gmail.com" class="btn-outline-dark w100">
+              <i class="fas fa-envelope"></i> Send via Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="ft-wrap">
+      <div class="ft-bottom" style="padding:28px 0;border-top:1px solid var(--edge)">
+        <span>© 2026 Yazra Marketing. All rights reserved.</span>
+        <span>Marketing that moves, brands that matter.</span>
+      </div>
+    </div>
+  </footer>
+  <div id="rroot"></div>
+  <script src="script.js"></script>
+</body>
+</html>
