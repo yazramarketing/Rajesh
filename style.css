@@ -99,7 +99,7 @@ img{max-width:100%;display:block}
   box-shadow:0 4px 20px rgba(0,0,0,.3);
 }
 .hdr-wrap{
-  max-width:var(--mW);margin:0 auto;padding:0 28px;
+  width:100%;max-width:var(--mW);margin:0 auto;padding:0 28px;
   height:100%;display:flex;align-items:center;gap:36px;
 }
 .logo-img{height:44px;width:auto;object-fit:contain;display:block}
@@ -111,6 +111,7 @@ img{max-width:100%;display:block}
 }
 .nav-a:hover{color:var(--t);background:rgba(255,255,255,.06)}
 .nav-a.active{color:var(--blue)}
+.nav-mobile-btn{display:none}
 .hdr-btns{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .btn-wa{
   display:flex;align-items:center;gap:8px;
@@ -719,23 +720,30 @@ select option{background:var(--navy3)}
   .sec-wrap{padding:0 18px}
   .nav{display:none}
   .hdr-btns{display:none}
-  .hdr-wrap{padding:0 18px;gap:16px}
-  .burger{display:flex}
+  .hdr-wrap{width:100%;padding:0 18px;gap:16px;justify-content:space-between}
+  .burger{display:flex;margin-left:auto}
   .nav.open{
     display:flex;flex-direction:column;
+    justify-content:flex-start;align-items:stretch;
     position:fixed;top:0;right:0;height:100vh;width:min(280px,85vw);
     background:var(--navy2);border-left:1px solid var(--edge);
-    padding:80px 24px;gap:6px;z-index:999;
+    padding:80px 24px 40px;gap:6px;z-index:999;
     box-shadow:-12px 0 36px rgba(0,0,0,.5);
   }
   .nav.open .nav-a{
     font-size:1.05rem;padding:14px 0;
     border-bottom:1px solid var(--edge);
   }
-  .hdr-btns.open{
-    display:flex;flex-direction:column;
-    position:fixed;bottom:28px;right:0;width:min(280px,85vw);
-    padding:0 24px;z-index:999;gap:8px;
+  .nav-mobile-btn{
+    display:block;
+    margin-top:auto;
+    width:100%;
+    padding-top:20px;
+  }
+  .nav-mobile-btn .btn-cta{
+    display:block;
+    width:100%;
+    text-align:center;
   }
   .hero{padding:calc(var(--nH) + 36px) 18px 60px}
   .hero-h1{font-size:2rem}
@@ -743,19 +751,88 @@ select option{background:var(--navy3)}
   .hero-sub{font-size:.9rem}
   .hero-ctas{flex-direction:column;width:100%}
   .btn-hero-primary,.btn-hero-outline{justify-content:center;width:100%}
-  .hero-stats{flex-wrap:wrap;justify-content:center;gap:8px}
-  .hs-item{padding:0 12px}
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+    max-width: 480px;
+    margin: 10px auto 0;
+  }
+  .hs-item {
+    padding: 12px 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--edge);
+    border-radius: var(--r);
+    text-align: center;
+  }
   .hs-div{display:none}
   .sec-top{flex-direction:column;align-items:flex-start;gap:14px}
   .sec-desc{max-width:100%}
-  .svc-grid{grid-template-columns:1fr}
+  .svl-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 20px;
+    position: relative;
+    border-bottom: 1px solid var(--edge);
+  }
+  .svl-num {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--blue);
+    opacity: 0.15;
+    line-height: 1;
+  }
+  .svl-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    background: rgba(0, 198, 255, 0.1);
+    border: 1px solid rgba(0, 198, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+  }
+  .svl-body h3 {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+    font-family: var(--fh);
+    font-weight: 700;
+    color: var(--t);
+  }
+  .svl-body p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--t2);
+  }
+  .svl-tag {
+    align-self: flex-start;
+    margin-top: 4px;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    padding: 4px 12px;
+    border: 1px solid rgba(0,198,255,.3);
+    border-radius: 99px;
+    background: rgba(0,198,255,.06);
+    white-space: nowrap;
+  }
   .why-grid{grid-template-columns:1fr}
   .stats-wrap{grid-template-columns:1fr 1fr}
   .cta-wrap{flex-direction:column;align-items:flex-start}
   .testi-card{padding:28px}
   .ft-top{flex-direction:column;align-items:flex-start}
   .ft-bottom{flex-direction:column}
-  .hs-item{padding:0 14px}
+  .hs-item{padding:12px 8px}
   .cf-card{padding:24px 18px}
   .about-btns{flex-direction:column}
   .about-btns .btn-primary,.about-btns .btn-outline{width:100%;justify-content:center}
