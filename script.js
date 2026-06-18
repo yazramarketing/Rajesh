@@ -64,26 +64,50 @@ function highlightNav() {
     if (el && window.scrollY >= el.offsetTop - 120) cur = id;
   });
   nav?.querySelectorAll('a').forEach(a => {
-    const id = a.getAttribute('href').slice(1);
+    const href = a.getAttribute('href') || '';
+    const id = href.startsWith('#') ? href.slice(1) : '';
     a.classList.toggle('active', id === cur);
   });
 }
 // ════════════════════
 // SMOOTH SCROLL
 // ════════════════════
+function closeMobileNav() {
+  burger?.classList.remove('open');
+  nav?.classList.remove('open');
+  hdrBtns?.classList.remove('open');
+  document.body.classList.remove('locked');
+}
 function goTo(id) {
   const el = document.getElementById(id);
   if (!el) return;
-  window.scrollTo({ top: el.offsetTop - 72, behavior: 'smooth' });
+  const top = el.getBoundingClientRect().top + window.pageYOffset - 72;
+  window.scrollTo({ top, behavior: 'smooth' });
 }
 window.goTo = goTo;
-document.querySelectorAll('[href^="#"]').forEach(link => {
+function bindInternalAnchor(link) {
   link.addEventListener('click', e => {
-    const id = link.getAttribute('href').slice(1);
+    const href = link.getAttribute('href') || '';
+    if (!href.startsWith('#')) return;
+    const id = href.slice(1);
     if (!id) return;
     e.preventDefault();
+    closeMobileNav();
     goTo(id);
+    history.replaceState(null, '', `#${id}`);
   });
+}
+document.querySelectorAll('[href^="#"]').forEach(bindInternalAnchor);
+
+const contactCTAs = document.querySelectorAll('a.btn-cta[href="#contact"]');
+contactCTAs.forEach(anchor => {
+  const handler = event => {
+    event.preventDefault();
+    closeMobileNav();
+    setTimeout(() => goTo('contact'), 50);
+  };
+  anchor.addEventListener('click', handler);
+  anchor.addEventListener('touchend', handler, { passive: false });
 });
 // ════════════════════
 // REVEAL ON SCROLL
