@@ -34,22 +34,29 @@ const hdr    = document.getElementById('hdr');
 const burger = document.getElementById('burger');
 const nav    = document.getElementById('nav');
 const hdrBtns = document.getElementById('hdr-btns');
+const navOverlay = document.getElementById('nav-overlay');
+
 window.addEventListener('scroll', () => {
   hdr?.classList.toggle('scrolled', window.scrollY > 50);
   highlightNav();
 }, { passive: true });
+
 burger?.addEventListener('click', () => {
   burger.classList.toggle('open');
   nav?.classList.toggle('open');
+  navOverlay?.classList.toggle('open');
   hdrBtns?.classList.toggle('open');
   document.body.classList.toggle('locked');
+  document.documentElement.classList.toggle('locked');
 });
+
+navOverlay?.addEventListener('click', () => {
+  closeMobileNav();
+});
+
 nav?.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => {
-    burger?.classList.remove('open');
-    nav?.classList.remove('open');
-    hdrBtns?.classList.remove('open');
-    document.body.classList.remove('locked');
+    closeMobileNav();
   });
 });
 document.getElementById('logo-link')?.addEventListener('click', e => {
@@ -75,8 +82,10 @@ function highlightNav() {
 function closeMobileNav() {
   burger?.classList.remove('open');
   nav?.classList.remove('open');
+  navOverlay?.classList.remove('open');
   hdrBtns?.classList.remove('open');
   document.body.classList.remove('locked');
+  document.documentElement.classList.remove('locked');
 }
 function goTo(id) {
   const el = document.getElementById(id);
@@ -167,17 +176,19 @@ document.querySelectorAll('.btn-primary, .btn-cta').forEach(btn => {
 // ════════════════════
 // CARD HOVER TILT
 // ════════════════════
-document.querySelectorAll('.svl-item, .why-card').forEach(card => {
-  card.addEventListener('mousemove', function (e) {
-    const r = this.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - .5;
-    const y = (e.clientY - r.top) / r.height - .5;
-    this.style.transform = `translateY(-4px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`;
+if (window.matchMedia('(hover: hover)').matches) {
+  document.querySelectorAll('.svl-item, .why-card').forEach(card => {
+    card.addEventListener('mousemove', function (e) {
+      const r = this.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - .5;
+      const y = (e.clientY - r.top) / r.height - .5;
+      this.style.transform = `translateY(-4px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`;
+    });
+    card.addEventListener('mouseleave', function () {
+      this.style.transform = '';
+    });
   });
-  card.addEventListener('mouseleave', function () {
-    this.style.transform = '';
-  });
-});
+}
 // ════════════════════
 // SEND VIA WHATSAPP
 // ════════════════════
