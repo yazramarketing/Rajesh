@@ -167,7 +167,7 @@ document.querySelectorAll('.btn-primary, .btn-cta').forEach(btn => {
 // ════════════════════
 // CARD HOVER TILT
 // ════════════════════
-document.querySelectorAll('.svc-card, .why-card').forEach(card => {
+document.querySelectorAll('.svl-item, .why-card').forEach(card => {
   card.addEventListener('mousemove', function (e) {
     const r = this.getBoundingClientRect();
     const x = (e.clientX - r.left) / r.width - .5;
@@ -223,6 +223,7 @@ if (heroRight) {
     heroRight.style.opacity = '1';
   }, 3200);
 }
+
 // ════════════════════
 // CONSOLE BRANDING
 // ════════════════════
